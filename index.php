@@ -1,9 +1,4 @@
-<?php
-include_once 'app/php/array.php';
-include_once 'app/php/function.php';
 
-
-?>
 
 
 
