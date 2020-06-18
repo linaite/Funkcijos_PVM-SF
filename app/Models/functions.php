@@ -33,14 +33,23 @@ function get_table($array)
     print ' </tbody></table>';
 }
 
-
-
-
-
-
-
-
-
+function top5($array)
+{
+    $keys = array_column($array['sodybos'], 'reitingas');
+    array_multisort($keys, SORT_DESC, $array['sodybos']);
+    print '<table class="table table-hover"><thead><tr>
+    <th scope="col">Sodybos id</th>
+      <th scope="col">Reitingas</th>
+      <th scope="col">Sodybos pavadinimas</th>
+      <th scope="col">Sodybos adresas</th>
+       <th scope="col">Namuku skaicius</th>
+        <th scope="col">Miegamos vietos</th>
+    </tr></thead><tbody>';
+    for ($i = 0; $i < 5; $i++) {
+        print '<tr><th scope="row">' . $array['sodybos'][$i]['sodybos_id'] . '</th><td>' . $array['sodybos'][$i]['reitingas'] . '</td><td>' . $array['sodybos'][$i]['sodybos_pavadinimas'] . '</td><td>' . $array['sodybos'][$i]['sodybos_adresas'] . '</td><td>' . $array['sodybos'][$i]['namuku_skaicius'] . '</td><td>' . $array['sodybos'][$i]['miegamos_vietos'] . '</td></tr>';
+    }
+    print '</tbody></table>';
+}
 
 
 ?>

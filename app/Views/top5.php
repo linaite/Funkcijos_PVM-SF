@@ -22,7 +22,7 @@ include_once '../Models/functions.php';
     <?php get_menu($array); ?>
 </header>
 <section>
-    <?php get_top5($array); ?>
+   <?php top5($array) ?>
 </section>
 
 
