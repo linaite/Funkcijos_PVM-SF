@@ -89,6 +89,35 @@ $array = [
             'miegamos_vietos' => 8,
         ],
     ],
+    'form' => [
+        'inputs' => [
+            'user_name' => [
+                'type' => 'text',
+                'placeholder' => 'User name:',
+                'name' => 'user_name',
+            ],
+            'user_email' => [
+                'type' => 'email',
+                'placeholder' => 'User email:',
+                'name' => 'user_email',
+            ],
+            'user_phone' => [
+                'type' => 'phone_number',
+                'placeholder' => 'Phone number:',
+                'name' => 'user_number',
+            ],
+            'textarea' => [
+                'placeholder' => 'Your message:',
+                'name' => 'textarea',
+            ],
+        ],
+        'buttons' => [
+            'send' => [
+                'type' => 'submit',
+                'value' => 'Send message',
+            ],
+        ],
+    ],
 ];
 
 ?>

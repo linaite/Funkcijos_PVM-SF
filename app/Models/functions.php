@@ -14,23 +14,15 @@ data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-e
 
 function get_table($array)
 {
-    print '<table class="table table-hover"><thead>';
-    print'<tr>
-      <th scope="col">Sodybos id</th>
-      <th scope="col">Reitingas</th>
-      <th scope="col">Sodybos pavadinimas</th>
-      <th scope="col">Sodybos adresas</th>
-       <th scope="col">Namuku skaicius</th>
-        <th scope="col">Miegamos vietos</th>
-    </tr></thead><tbody>';
-    foreach ($array['sodybos'] as $sodybos_key) {
-        print '<tr>';
-        foreach ($sodybos_key as $sodybos_data) {
-            print "<td>$sodybos_data</td>";
-        }
-        print '</tr>';
+    print '<table class="table"><thead><tr>';
+    foreach ($array['sodybos']['0'] as $key => $value) {
+        print '<th>' . $key . '</th>';
     }
-    print ' </tbody></table>';
+    print '</tr></thead><tbody>';
+    foreach ($array['sodybos'] as $names) {
+        print '<tr><td>' . $names['sodybos_id'] . '</td><td>' . $names['reitingas'] . '</td><td>' . $names['sodybos_pavadinimas'] . '</td><td>' . $names['sodybos_adresas'] . '</td><td>' . $names['namuku_skaicius'] . '</td><td>' . $names['miegamos_vietos'] . '</td></tr>';
+    }
+    print '</tbody></table>';
 }
 
 function top5($array)
@@ -50,6 +42,29 @@ function top5($array)
     }
     print '</tbody></table>';
 }
+
+function get_contact($masyvas)
+{
+    print '<form class="d-flex flex-column" method="post">';
+    foreach ($masyvas['form']['inputs'] as $input) {
+        if ($input['name'] == 'user_name' || $input['name'] == 'user_email' || $input['name'] == 'user_number') {
+            print '<input class="mb-4 p-2" type="' . $input['type'] . '" placeholder="' . $input['placeholder'] . '" name="' . $input['name'] . '">';
+        } else {
+            print '<textarea class="mb-4 p-2" name="' . $input['name'] . '" placeholder="' . $input['placeholder'] . '"></textarea>';
+        }
+    }
+    foreach ($masyvas['form']['buttons'] as $button) {
+        print '<input class="w-25 p-2" type="' . $button['type'] . '" value="' . $button['value'] . '">';
+    }
+    print '</form>';
+}
+
+
+
+
+
+
+
 
 
 ?>
