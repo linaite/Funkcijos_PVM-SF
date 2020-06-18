@@ -1,6 +1,9 @@
 <?php
 include_once '../php/array.php';
 include_once '../Models/functions.php';
+
+
+
 ?>
 
 <!doctype html>
@@ -18,14 +21,11 @@ include_once '../Models/functions.php';
 <header>
     <?php get_menu($array); ?>
 </header>
-<main class="container">
-    <section class="mt-5">
-        <div class="row">
-            <div class="col-12">
-                <?php get_table($array) ;?>
-            </div>
-    </section>
-</main>
+<section>
+    <?php get_top5($array); ?>
+</section>
+
+
 
 <script src="../../assets/js/jQuery.js"></script>
 <script src="../../assets/js/bootstrap.bundle.js"></script>
