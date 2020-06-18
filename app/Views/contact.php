@@ -21,7 +21,9 @@ include_once '../Models/functions.php';
 <header>
     <?php get_menu($array); ?>
 </header>
-
+<section>
+    <?php get_form($new_array); ?>
+</section>
 
 
 <script src="../../assets/js/jQuery.js"></script>
