@@ -1,5 +1,7 @@
-
-
+<?php
+include_once 'app/php/array.php';
+include_once 'app/Models/functions.php';
+?>
 
 
 <!doctype html>
@@ -14,19 +16,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<section class="container-fluid">
-    <div class="row vh-100 d-flex justify-content-center align-items-center">
-        <div class="col-6 h-50 bg-warning d-flex flex-column justify-content-center align-items-center">
-            <div>
-                <a class="h-100 d-flex justify-content-center align-items-center align-items-center"
-                   href="app/Views/home.php">
-                    <img class="w-25" src="https://paslaugos-img.dgn.lt/gallery_5_1910695/img.jpg" alt="Logo">
-                </a>
-                <h3 class="text-secondary text-center">Kviečiame atvykti!</h3>
-            </div>
-        </div>
-    </div>
-</section>
+<main>
+<?php orderForm($data_masyvas); ?>
+</main>
 <script src="assets/js/jQuery.js"></script>
 <script src="assets/js/bootstrap.bundle.js"></script>
 </body>
