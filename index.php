@@ -3,7 +3,6 @@ include_once 'app/php/array.php';
 include_once 'app/Models/functions.php';
 ?>
 
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,10 +14,8 @@ include_once 'app/Models/functions.php';
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-<main>
-<?php orderForm($data_masyvas); ?>
-</main>
+<body class="container">
+<?php orderForm($masyvas);?>
 <script src="assets/js/jQuery.js"></script>
 <script src="assets/js/bootstrap.bundle.js"></script>
 </body>
